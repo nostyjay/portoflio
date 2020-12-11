@@ -1,9 +1,9 @@
 ## The Meal App
-### https://in-info-web4.informatics.iupui.edu/~nj16/themovieforum/
+### https://in-info-web4.informatics.iupui.edu/~nj16/api-practice
 ##
-#### 
-#### 
-#### 
+#### The Meal app was created using Angular and the Ionic Framework and
+#### was meant to be a way for me to practice making API calls and displaying
+#### the returned information to a web app.
 ##
 ## Basic functionality:
 #### The Meal app has 3 main functions.
