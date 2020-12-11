@@ -1,0 +1,57 @@
+
+
+ion-toolbar{
+  display: flex;
+  height: 100px;
+  text-align: center;
+
+  .title{
+    align-items: center;
+
+    span{
+      border-bottom: 3px solid white;
+    }
+  }
+}
+
+.randomMeal{
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.ingredients{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 20px;
+  ion-label{
+    border-bottom: 2px solid grey;
+    margin-left: 20px;
+  }
+
+}
+
+.instructions{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 20px;
+  ion-label{
+    border-bottom: 2px solid grey;
+    margin-left: 20px;
+  }
+
+}
+
+.source{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  font-size: 20px;
+  ion-label{
+    border-bottom: 2px solid grey;
+    margin-left: 20px;
+  }
+}

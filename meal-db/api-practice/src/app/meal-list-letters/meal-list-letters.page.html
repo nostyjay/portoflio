@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+  <div style="display: flex; justify-content: center;">
+    <ion-buttons >
+      <ion-button routerLink="/home" routerDirection="forward">Random Meal</ion-button>|
+      <ion-button routerLink="/search-meal" routerDirection="forward">Search Meal</ion-button>|
+      <ion-button routerLink="/meal-list-letters" routerDirection="forward">Meal List</ion-button>
+    </ion-buttons>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label class="title"><span>select first letter of desired recipe</span></ion-label>
+  <ion-select #S
+      (ionChange)="createListLink(S.value)"
+      cancelText="Back"
+      okText="Okay"
+      >
+    <ion-select-option 
+     value="{{letter}}"
+    *ngFor="let letter of alphabet" 
+    id="{{letter}}"
+    [innerHtml]="letter"
+    ></ion-select-option>
+  </ion-select>
+
+  <ion-list >
+    <ion-card *ngFor="let meal of this.meal?.meals">
+      <img *ngIf="meal.strMealThumb" src="{{meal.strMealThumb}}" alt="failed to load"/>
+      <ion-item>{{meal.strMeal}}</ion-item>
+      <ion-item>{{meal.strCategory}}</ion-item>
+      
+    </ion-card>
+  </ion-list>
+  
+</ion-content>

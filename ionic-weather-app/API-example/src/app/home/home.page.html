@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Weather App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="showLoader()">Show Loader</ion-button>
+  <div class="loader" *ngIf="weatherService.loading">
+    <ion-spinner name="crescent" color="secondary"></ion-spinner>
+  </div>
+  <div>
+    <ion-input [(ngModel)]="location" placeholder="Enter Zip Code or City"></ion-input>
+    <ion-button (click)="getLocation()" fill="clear" slot="end">
+      <ion-icon name="search-outline" icon-only></ion-icon>
+    </ion-button>
+  </div>
+ 
+    <ion-list style="text-align: center;">
+      <img *ngIf="weatherService.weather" src="{{weatherService.weather.current.condition.icon}}" alt="weather icon" />
+      <ion-item lines="none" *ngIf="weatherService.weather">{{weatherService.weather.location.name}}, {{weatherService.weather.location.region}}</ion-item>
+      <ion-item lines="none" *ngIf="weatherService.weather">{{weatherService.weather.current.temp_f}}°<span style="top:-5px;">f</span></ion-item>
+    </ion-list>
+</ion-content>

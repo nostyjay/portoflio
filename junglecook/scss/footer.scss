@@ -1,0 +1,110 @@
+footer{
+    width: 100%;
+    padding: 30px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+}
+
+.text{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer{
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+
+
+    .links{
+    a{
+    margin: 15px;
+    text-decoration: none;
+    color: black
+    }
+    }
+
+    .socialMedia{
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+
+        .facebook{
+            width: 30px;
+            background-image: url(../assets/images/facebook.svg);
+            background-repeat: no-repeat;
+        
+        }
+        .instagram{
+            width: 30px;
+            background-image: url(../assets/images/instagram.svg);
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@media only all and (max-width: 768px){
+    footer{
+        width: 100%;
+        padding: 30px;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .footer{
+        justify-content: space-around;
+        width: 100%;
+        display: flex;
+        font-family: "Lato", sans-serif;
+        font-style: italic;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    
+    
+        .links{
+        a{
+        margin: 15px;
+        text-decoration: none;
+        color: black
+        }
+        }
+    
+        .socialMedia{
+            display: flex;
+            justify-content: space-between;
+            width: 50px;
+    
+            .facebook{
+                width: 15px;
+                background-image: url(../assets/images/facebook.svg);
+                background-repeat: no-repeat;
+            
+            }
+            .instagram{
+                width: 15px;
+                background-image: url(../assets/images/instagram.svg);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 360px){
+    .footer{
+        .text{
+            flex-direction: column;
+        }
+        margin-top: 30px;
+        padding: 15px;
+        .socialMedia{
+            width: 100px;
+        }
+
+    }
+}

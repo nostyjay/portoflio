@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <div style="display: flex; justify-content: center;">
+      <ion-buttons>
+        <ion-button routerLink="/home" routerDirection="back">
+          <ion-icon name="home-sharp"></ion-icon>
+        </ion-button>|
+        <ion-button routerLink="/my-favorites" routerDirection="forward">
+          <ion-icon name="flag-sharp"></ion-icon>
+        </ion-button>|
+        <ion-button routerLink="/about" routerDirection="forward">
+          <ion-icon name="happy-sharp"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4 *ngIf="movie.length < 1">you currently have no favorites...</h4>
+<ion-card *ngFor="let movie of movie">
+  <ion-card-header>
+    <ion-card-subtitle>{{movie?.Year}}</ion-card-subtitle>
+    <ion-card-title>{{movie?.Title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="movieImg"><img src="{{movie?.Poster}}" alt=""></div>
+    <ion-button (click)=removeMovie() color="danger" id="{{movie?.imdbID}}">unfavorite</ion-button>
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,261 @@
+.browse{
+background-image: linear-gradient(to top, rgba(167, 232, 189, 0.8),rgba(167, 232, 189, 0.8)),
+url(../assets/images/recipe-hero.jpg);
+background-position: center;
+background-size: cover;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+
+    h2{
+        font-family: 'Caveat-Bold';
+        font-size: 25px;
+        letter-spacing: 2.5px;
+        font-weight: 150;
+        margin-top: 200px;
+        margin-left: 110px;
+    }
+
+    .card-wrapper{
+        width: 1800px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        min-height: 60%;
+    }
+    .card{
+        margin: 50px;
+        margin-top: 30px;
+        width: 525px;
+        height: 265px;
+        display: flex;
+
+        .card-img{
+            height: 100%;
+            width: 300px;
+            border-radius: 20px;
+            contain: centent;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-text{
+            height: 100%;
+            padding-top: 30px;
+            padding: 20px;
+            width: 225px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 20px;
+
+            h3{
+                margin: 0 auto;
+                margin-bottom: 15px;
+                font-family: 'Lato', sans-serif;
+                font-size: 15px;
+                letter-spacing: 1.5px;
+                border-bottom: 3px solid black;
+                width: 75%;
+            }
+
+            p{
+                width: 75%;
+                margin: 0 auto;
+                font-family: 'Lato', sans-serif;
+                letter-spacing: 0.9px;
+                font-size: 9px;
+            }
+
+            .time{
+                display: flex;
+                height: 100%;
+                width: 50%;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 auto;
+                .time-img{
+                    width: 25px;
+                    height: 25px;
+                    background-image: url(../assets/images/time.svg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                .time-text{
+                    font-family: 'Lato', sans-serif;
+                    font-size: 10px;
+                    letter-spacing: 0.2px;
+                }
+            }
+            .servings{
+                display: flex;
+                height: 100%;
+                width: 50%;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 auto;
+                margin-top: -25px;
+                .servings-img{
+                    width: 25px;
+                    height: 25px;
+                    background-image: url(../assets/images/servings.svg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+                .servings-text{
+                    font-family: 'Lato', sans-serif;
+                    font-size: 10px;
+                    letter-spacing: 0.2px;
+                }
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 768px){
+    .browse{
+        background-image: linear-gradient(to top, rgba(167, 232, 189, 0.8),rgba(167, 232, 189, 0.8)),
+        url(../assets/images/recipe-hero.jpg);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        
+            h2{
+                font-family: 'Caveat-Bold';
+                font-size: 25px;
+                letter-spacing: 2.5px;
+                font-weight: 150;
+                margin-top: 200px;
+                margin-left: 110px;
+            }
+        
+            .card-wrapper{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                min-height: 60%;
+            }
+            .card{
+                margin: 50px;
+                margin-top: 30px;
+                width: 525px;
+                height: 265px;
+                display: flex;
+        
+                .card-img{
+                    height: 100%;
+                    width: 300px;
+                    border-radius: 20px;
+                    contain: centent;
+                    background-size: cover;
+                    background-position: center;
+                }
+        
+                .card-text{
+                    height: 100%;
+                    padding-top: 30px;
+                    padding: 20px;
+                    width: 225px;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    border-radius: 20px;
+        
+                    h3{
+                        margin: 0 auto;
+                        margin-bottom: 15px;
+                        font-family: 'Lato', sans-serif;
+                        font-size: 15px;
+                        letter-spacing: 1.5px;
+                        border-bottom: 3px solid black;
+                        width: 75%;
+                    }
+        
+                    p{
+                        width: 75%;
+                        margin: 0 auto;
+                        font-family: 'Lato', sans-serif;
+                        letter-spacing: 0.9px;
+                        font-size: 9px;
+                    }
+        
+                    .time{
+                        display: flex;
+                        height: 100%;
+                        width: 50%;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin: 0 auto;
+                        .time-img{
+                            width: 25px;
+                            height: 25px;
+                            background-image: url(../assets/images/time.svg);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                        .time-text{
+                            font-family: 'Lato', sans-serif;
+                            font-size: 10px;
+                            letter-spacing: 0.2px;
+                        }
+                    }
+                    .servings{
+                        display: flex;
+                        height: 100%;
+                        width: 50%;
+                        justify-content: space-around;
+                        align-items: center;
+                        margin: 0 auto;
+                        margin-top: -25px;
+                        .servings-img{
+                            width: 25px;
+                            height: 25px;
+                            background-image: url(../assets/images/servings.svg);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                        .servings-text{
+                            font-family: 'Lato', sans-serif;
+                            font-size: 10px;
+                            letter-spacing: 0.2px;
+                        }
+                    }
+                }
+            }
+        }
+}
+
+@media only all and (max-width: 360px){
+    .browse{
+        h2{
+            margin-top: 150px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        .card-wrapper{
+            margin-top: 30px;
+            justify-content: center;
+            .card{
+                margin: 0 30px;
+                height: 400px;
+                flex-direction: column;
+                .card-img{
+                    height: 150px;
+                }
+                .card-text{
+                    height:150px;
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

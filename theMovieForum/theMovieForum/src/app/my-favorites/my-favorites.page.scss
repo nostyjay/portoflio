@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+ion-toolbar{
+    display: flex;
+    height: 60px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+  
+    ion-buttons{
+      width: 100%;
+      justify-content: space-around;
+    }
+  
+    .title{
+      align-items: center;
+  
+      span{
+        border-bottom: 3px solid white;
+      }
+    }
+  }
+  
+  .randomMeal{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .ingredients{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 20px;
+    ion-label{
+      border-bottom: 2px solid grey;
+      margin-left: 20px;
+    }
+  
+  }
+  
+  .instructions{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 20px;
+    ion-label{
+      border-bottom: 2px solid grey;
+      margin-left: 20px;
+    }
+  
+  }
+  
+  .source{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 20px;
+    ion-label{
+      border-bottom: 2px solid grey;
+      margin-left: 20px;
+    }
+  }
+  
+  div{
+    display: flex;
+    flex-direction: column;
+    h3{
+      margin: 20px 20px 0px 20px;
+      justify-content: center;
+      width: 50%;
+      text-align: center;
+      border-bottom: 3px solid grey;
+    }
+    ion-button{
+      width: 30%;
+      margin: 0 20px;
+      align-self: flex-end;
+    }
+  }
+  ion-content{
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    min-height: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    h4{
+      text-align: center;
+      margin: 250px auto;
+      opacity: 0.5;
+    }
+  }

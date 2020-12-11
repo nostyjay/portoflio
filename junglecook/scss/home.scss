@@ -1,0 +1,101 @@
+.home{
+height: 100vh;
+background-image: linear-gradient(to top, rgba(242, 92, 84, 0.6),rgba(242, 92, 84, 0.6)),
+url(../assets/images/hero.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+.home-title{
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 180px;
+    height: 358px;
+    width: 358px;
+    top:60px;
+    right:60px;
+    background-image: linear-gradient(to top, #FFD972,#FFD972);
+    filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2{
+        text-align: center;
+        font-family: 'Caveat-Bold';
+        font: normal normal bold 24px/30px Caveat;
+        font-size: 24px;
+        letter-spacing: 2.4px;
+    }
+    p{
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-size: 13px;
+        letter-spacing: 1.3px;
+        width: 164px;
+        height: 80px;
+    }
+}
+.home-subtitle{
+    position: relative;
+    border-radius: 84px;
+    height: 168px;
+    width: 168px;
+    margin: 360px auto;
+    left: 120px;
+    bottom: 120px;
+    background-color: rgba(252, 188, 184, 1);
+    filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        height: 38px;
+        width: 106px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+}
+
+@media only all and (max-width: 768px){
+    .home{
+        .home-subtitle{
+            bottom: 80px;
+        }
+    }
+
+}
+
+@media only all and (max-width: 360px){
+    .home{
+        .home-title{
+            width: 257px;
+            height:257px;
+            border-radius: 168px;
+            top:60px;
+            right:30px;
+            h2{
+                font-size: 17px;
+            }
+        }
+        .home-subtitle{
+            width: 121px;
+            height: 121px;
+            left: 80px;
+            bottom:40px;
+            margin: 180px auto;
+            p{
+                font-size: 8px;
+            }
+        }
+    }
+}

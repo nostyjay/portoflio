@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+  <div style="display: flex; justify-content: center;">
+    <ion-buttons >
+      <ion-button routerLink="/home" routerDirection="forward">Random Meal</ion-button>|
+      <ion-button routerLink="/search-meal" routerDirection="forward">Search Meal</ion-button>|
+      <ion-button routerLink="/meal-list-letters" routerDirection="forward">Meal List</ion-button>
+    </ion-buttons>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="searchBar">
+    <ion-input [(ngModel)]="mealSearch" style="border-radius: 15px;" placeholder="search for a meal..."></ion-input>
+    <ion-button (click)="searchMeal()" fill="clear" slot="end">
+      <ion-icon color="dark" name="search-outline" icon-only></ion-icon>
+    </ion-button>
+  </div>
+  <ion-card *ngIf="mealService.meal">
+    <img src="{{mealService.meal?.meals[0]?.strMealThumb}}" alt="">
+    <ion-card-title style="margin-left: 15px;">{{mealService.meal?.meals[0]?.strMeal}}</ion-card-title>
+    <ion-card-subtitle style="margin-left: 15px;">{{mealService.meal?.meals[0]?.strCategory}}</ion-card-subtitle>
+    <ion-card-content>{{mealService.meal?.meals[0]?.strInstructions}}</ion-card-content>
+  </ion-card>
+</ion-content>

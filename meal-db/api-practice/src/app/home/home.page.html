@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+  <div style="display: flex; justify-content: center;">
+    <ion-buttons >
+      <ion-button routerLink="/home" routerDirection="forward">Random Meal</ion-button>|
+      <ion-button routerLink="/search-meal" routerDirection="forward">Search Meal</ion-button>|
+      <ion-button routerLink="/meal-list-letters" routerDirection="forward">Meal List</ion-button>
+    </ion-buttons>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="randomMeal">
+    <ion-button (click)="getRandomMeal()" color="dark">Get Random Meal</ion-button>
+  </div>
+  <ion-list>
+    <img *ngIf="mealService.meal?.meals[0]?.strMealThumb" src="{{mealService.meal?.meals[0]?.strMealThumb}}" alt="">
+    <div class="instructions">
+      <ion-label >Instructions</ion-label>
+      <ion-item style="font-size: 14px; margin-top:15px;" lines="none" *ngIf="mealService.meal?.meals[0]?.strInstructions">{{mealService.meal.meals[0].strInstructions}}</ion-item>
+    </div>
+    <div class="ingredients">
+      <ion-label>Ingredients</ion-label>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient1">{{mealService.meal?.meals[0]?.strIngredient1}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient2">{{mealService.meal?.meals[0]?.strIngredient2}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient3">{{mealService.meal?.meals[0]?.strIngredient3}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient4">{{mealService.meal?.meals[0]?.strIngredient4}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient5">{{mealService.meal?.meals[0]?.strIngredient5}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient6">{{mealService.meal?.meals[0]?.strIngredient6}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient7">{{mealService.meal?.meals[0]?.strIngredient7}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient8">{{mealService.meal?.meals[0]?.strIngredient8}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient9">{{mealService.meal?.meals[0]?.strIngredient9}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient10">{{mealService.meal?.meals[0]?.strIngredient10}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient11">{{mealService.meal?.meals[0]?.strIngredient11}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient12">{{mealService.meal?.meals[0]?.strIngredient12}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient13">{{mealService.meal?.meals[0]?.strIngredient13}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient14">{{mealService.meal?.meals[0]?.strIngredient14}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient15">{{mealService.meal?.meals[0]?.strIngredient15}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient16">{{mealService.meal?.meals[0]?.strIngredient16}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient17">{{mealService.meal?.meals[0]?.strIngredient17}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient18">{{mealService.meal?.meals[0]?.strIngredient18}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient19">{{mealService.meal?.meals[0]?.strIngredient19}}</ion-item>
+      <ion-item  style="font-size: 14px;" *ngIf="mealService.meal?.meals[0]?.strIngredient20">{{mealService.meal?.meals[0]?.strIngredient20}}</ion-item>
+    </div>
+    <div class="source"  *ngIf="mealService.meal?.meals[0]?.strSource">
+      <ion-label>Source Site</ion-label>
+      <ion-item style="font-size: 14px;">{{mealService.meal?.meals[0]?.strSource}}</ion-item>
+    </div>
+  </ion-list>
+</ion-content>

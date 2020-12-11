@@ -1,0 +1,118 @@
+.loginPage{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 217, 114, 1);
+
+    .loginWrapper{
+        font-family: 'Lato', sans-serif;
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
+
+        .login{
+            display: flex;
+            flex-direction: column;
+
+            div{
+                font-family: "Lato Black", sans-serif;
+                font-size: 30px;
+                font-weight: 900;
+                margin-bottom: 100px;
+            }
+
+            input{
+                background: none;
+                border:none;
+                border-bottom: 3px solid black;
+                margin-bottom: 50px;
+                width: 210px;
+                color: black;
+            }
+            input::placeholder{
+                font-family: "Lato", sans-serif;
+                opacity: 1;
+                letter-spacing: 1.2px;
+            }
+
+            input[type="submit"]{
+                width: 210px;
+                height: 52px;
+                background-color: #FFD972;
+                font-family: 'Caveat-Regular';
+                font-size: 25px;
+                border: none;
+                border-radius: 26px;
+                filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+            }
+        }
+        .signup{
+            display: flex;
+            flex-direction: column;
+
+            div{
+                font-family: "Lato Black", sans-serif;
+                font-size: 30px;
+                font-weight: 900;
+                margin-bottom: 100px;
+            }
+
+            input{
+                background: none;
+                border:none;
+                border-bottom: 3px solid black;
+                margin-bottom: 50px;
+                width: 250px;
+                font-family: "Lato", sans-serif;
+            }
+            input::placeholder{
+                color: black;
+                letter-spacing: 1.2px;
+                opacity: 1;
+            }
+
+            button{
+                width: 210px;
+                height: 52px;
+                background-color: #FFD972;
+                font-family: 'Caveat-Regular';
+                font-size: 25px;
+                border: none;
+                border-radius: 26px;
+                filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 768px){
+    .loginPage{
+        .loginWrapper{
+            margin-top: 150px;
+            flex-direction: column;
+        }
+    }
+}
+
+@media only all and (max-width: 360px){
+    .loginPage{
+        .loginWrapper{
+            flex-direction: column;
+            .login{
+                div{
+                    font-weight: 100;
+                }
+            }
+            .signup{
+                margin-top: 50px;
+                div{
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}

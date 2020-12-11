@@ -1,0 +1,178 @@
+.header{
+    position: fixed;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    top: 0;
+    width: 100%;
+
+    .closeBurger{
+        display: none;
+        position: absolute;
+        right: 30px;
+        top: 50px;
+        width: 20px;
+        align-self: flex-end;
+        justify-content: center;
+        img{
+            width: 50px;
+        }
+    }
+
+    .burger{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        width: 70%;
+        justify-content: space-around;
+        align-self: flex-end;
+        .links{
+            width: 90%;
+            display: flex;
+            justify-content: flex-end;
+            #yourRecipes{
+                display:none;
+            }
+            a{
+                margin:0 5%;
+                text-decoration: none;
+                color: black;
+                font-family: 'Caveat-Regular';
+                font-size: 25px;
+            }
+        }
+
+        button{
+            width: 158px;
+            height: 52px;
+            background-color: #FFD972;
+            font-family: 'Caveat-Regular';
+            font-size: 25px;
+            border: none;
+            border-radius: 26px;
+            filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+        }
+
+    }
+}
+
+.active-page{
+    border-bottom: 3px solid black;
+}
+
+@media only all and (max-width: 768px){
+    .header{
+
+        .closeBurger{
+            width: 20px;
+            align-self: flex-end;
+            img{
+                width: 20px;
+            }
+        }
+        .burger{
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            height: 60px;
+
+            .line{
+                margin: 7px;
+                width: 100%;
+                height: 4px;
+                background-color: black;
+                border-radius: 2px;
+            }
+        }
+        nav{
+            width:50%;
+            display: none;
+            height: 150px;
+
+            .links{
+                width: 100%;
+                flex-direction: column;
+                height: 100%;
+                a{
+                    align-self: flex-end;
+                    margin-top: 15px;
+                }
+            }
+
+            button{
+                margin-top: 15px;
+                margin-left: 225px;
+                width: 100px;
+            }
+            
+        }
+
+        .displayNav{
+            display: inline;
+        }
+    }
+
+}
+
+@media only all and (max-width: 360px){
+    .header{
+        a{
+            img{
+                width: 70%;
+            }
+        }
+        .closeBurger{
+            width: 20px;
+            align-self: flex-end;
+            img{
+                width: 20px;
+            }
+        }
+        .burger{
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            height: 60px;
+
+            .line{
+                margin: 4px;
+                width: 100%;
+                height:3.5px;
+                background-color: black;
+                border-radius: 2px;
+            }
+        }
+        nav{
+            margin-top: 10px;
+            width:50%;
+            display: none;
+            height: 150px;
+            flex-direction: column;
+
+            .links{
+                width: 100%;
+                flex-direction: column;
+                height: 100%;
+                a{
+                    align-self: flex-end;
+                    margin-top: 15px;
+                    font-size: 20px;
+                }
+            }
+
+            button{
+                margin-top: 10px;
+                margin-left: 25px;
+                width: 100px;
+            }
+            
+        }
+
+        .displayNav{
+            display: flex;
+        }
+    }
+}

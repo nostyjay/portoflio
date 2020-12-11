@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <div style="display: flex; justify-content: center;">
+      <ion-buttons>
+        <ion-button routerLink="/home" routerDirection="forward">
+          <ion-icon name="home-sharp"></ion-icon>
+        </ion-button>|
+        <ion-button routerLink="/my-favorites" routerDirection="forward">
+          <ion-icon name="flag-sharp"></ion-icon>
+        </ion-button>|
+        <ion-button routerLink="/about" routerDirection="forward">
+          <ion-icon name="happy-sharp"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <h3>Search Movies</h3>
+    <ion-searchbar [(ngModel)]="movieSearch" color="tertiary" showCancelButton="focus"  id="searchMovie"></ion-searchbar>
+    <ion-button *ngIf="movieSearch" color="tertiary" size="default" expand="block" (click)="showSearchMovie()" >Search</ion-button>
+    <ion-button *ngIf="!movieSearch" color="tertiary" size="default" expand="block" (click)="getFirstMovies()" >Search</ion-button>
+  </div>
+  <h4 *ngIf="!movie">search for movies...</h4>
+  <div class="movie-wrap" *ngFor="let movies of movie?.Search">
+    <ion-card class="movieCard" *ngIf="movies">
+      <div class="movieImg"><img src="{{movies?.Poster}}" alt=""></div>
+      <div class="descriptor">
+        <div class="movieTitle">{{movies?.Title}}</div>
+        <p>{{movies?.Year}}</p>
+      </div>
+      <ion-button (click)="addMovie()" id="{{movies?.imdbID}}" color="tertiary">favorite</ion-button>
+    </ion-card>
+  </div>
+</ion-content>

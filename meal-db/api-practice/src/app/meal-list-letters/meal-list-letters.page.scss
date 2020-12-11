@@ -1,0 +1,32 @@
+ion-toolbar{
+    display: flex;
+    height: 100px;
+    text-align: center;
+  
+    .title{
+      display: flex;
+  
+      span{
+        border-bottom: 3px solid white;
+      }
+    }
+  }
+
+ion-content{
+  ion-title, .title{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    span{
+      border-bottom: 2px solid grey;
+    }
+  }
+}
+
+
+ion-select{
+  width: 50%;
+  background-color: rgb(200, 200, 200);
+  border-radius: 25px;
+  margin: 25px auto;
+}
